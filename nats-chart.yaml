@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://github.com/saivamshi465/nats
+  url: https://github.com/saivamshi465/nats.git
   ref:
     branch: main
 ---
