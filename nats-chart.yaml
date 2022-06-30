@@ -1,0 +1,27 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: nats-chart
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://github.com/saivamshi465/nats
+  ref:
+    branch: main
+	
+apiVersion: source.toolkit.fluxcd.io/v2beta1
+kind: GitRepository
+metadata:
+  name: nats-chart
+  namespace: flux-system
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: ./nats/
+      version: '7.1.19'
+      sourceRef:
+        kind: GitRepository
+        name: nats-chart
+        namespace: flux-system
+      interval: 1m
