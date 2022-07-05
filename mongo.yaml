@@ -14,12 +14,12 @@ metadata:
   name: mongodb
   namespace: mongodb
 spec:
-  interval: 1m
+  interval: 1m0s
   chart:
     spec:
       chart: mongodb
       sourceRef:
         kind: HelmRepository
         name: bitnami
-      interval: 2m
+      interval: 2m0s
 
